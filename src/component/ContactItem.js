@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-const ContactItem = () => {
+const ContactItem = ({ item }) => {
   return (
     <div>
-      <Row>
+      <Row className='user-info'>
         <Col lg={1}>
           <img
             width={50}
@@ -13,8 +13,8 @@ const ContactItem = () => {
           ></img>
         </Col>
         <Col lg={11}>
-          <div>김빛나</div>
-          <div>012345678</div>
+          <div>{item.name}</div>
+          <div>{item.phoneNumber}</div>
         </Col>
       </Row>
     </div>
